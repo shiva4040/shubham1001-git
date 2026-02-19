@@ -1,8 +1,12 @@
 import { Smartphone, Users } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Animated } from './Animated';
+import { useTheme } from '../context/ThemeContext';
 
 export function Games() {
+  const { theme } = useTheme();
+  const isLight = theme === 'light';
+
   const androidGames = [
     { name: 'Last Island of Survival', emoji: '🏝️', description: 'Building shelters and surviving like a pro!' },
     { name: 'Chess', emoji: '♟️', description: 'The classic game where strategy beats luck.' },
@@ -53,7 +57,11 @@ export function Games() {
                 <h3 className="text-xl md:text-2xl font-semibold" style={{ color: 'var(--text-heading)' }}>Android Games</h3>
               </div>
               <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid var(--glass-border)', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-                <ImageWithFallback src="/shubham-gaming.png" alt="Playing mobile games" className="w-full h-36 md:h-48 object-cover" />
+                <ImageWithFallback
+                  src={isLight ? "/shubham-gaming-light.png" : "/shubham-gaming.png"}
+                  alt="Playing mobile games"
+                  className="w-full h-36 md:h-48 object-cover"
+                />
               </div>
               <div className="space-y-2 md:space-y-3">
                 {androidGames.map((game, i) => <GameCard key={i} game={game} delay={(i * 100) as 0 | 100 | 200} />)}
@@ -72,7 +80,11 @@ export function Games() {
                 <h3 className="text-xl md:text-2xl font-semibold" style={{ color: 'var(--text-heading)' }}>Physical Games</h3>
               </div>
               <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid var(--glass-border)', boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-                <ImageWithFallback src="/shubham-phgame.png" alt="Playing outdoor physical games" className="w-full h-36 md:h-48 object-cover" />
+                <ImageWithFallback
+                  src={isLight ? "/shubham-phgame-light.png" : "/shubham-phgame.png"}
+                  alt="Playing outdoor physical games"
+                  className="w-full h-36 md:h-48 object-cover"
+                />
               </div>
               <div className="space-y-2 md:space-y-3">
                 {physicalGames.map((game, i) => <GameCard key={i} game={game} delay={(i * 100) as 0 | 100 | 200} />)}

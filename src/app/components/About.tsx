@@ -1,6 +1,7 @@
 import { Brain, Zap, Heart } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Animated } from './Animated';
+import { useTheme } from '../context/ThemeContext';
 
 const cards = [
   {
@@ -33,6 +34,9 @@ const cards = [
 ];
 
 export function About() {
+  const { theme } = useTheme();
+  const isLight = theme === 'light';
+
   return (
     <section id="about" className="py-16 md:py-24 px-4">
       <div className="max-w-6xl mx-auto">
@@ -77,7 +81,11 @@ export function About() {
                   border: '1px solid var(--glass-border)',
                   boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
                 }}>
-                  <ImageWithFallback src="/shubham.png" alt="Shubham" className="w-full h-40 md:h-48 object-cover" />
+                  <ImageWithFallback
+                    src={isLight ? "/shubham-light.png" : "/shubham.png"}
+                    alt="Shubham"
+                    className="w-full h-40 md:h-48 object-cover"
+                  />
                 </div>
               </Animated>
             </div>

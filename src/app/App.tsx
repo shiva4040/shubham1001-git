@@ -1,6 +1,10 @@
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { Subjects } from './components/Subjects';
+import { Inspirations } from './components/Inspirations';
 import { Games } from './components/Games';
+import { Achievements } from './components/Achievements';
+import { DailyLife } from './components/DailyLife';
 import { FutureGoals } from './components/FutureGoals';
 import { FunFacts } from './components/FunFacts';
 import { Footer } from './components/Footer';
@@ -125,7 +129,15 @@ function AppContent() {
         <div className="section-glow-divider" />
         <About />
         <div className="section-glow-divider" />
+        <Subjects />
+        <div className="section-glow-divider" />
+        <Inspirations />
+        <div className="section-glow-divider" />
         <Games />
+        <div className="section-glow-divider" />
+        <Achievements />
+        <div className="section-glow-divider" />
+        <DailyLife />
         <div className="section-glow-divider" />
         <FutureGoals />
         <div className="section-glow-divider" />

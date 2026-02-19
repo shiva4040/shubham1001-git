@@ -30,7 +30,7 @@ export function Games() {
   );
 
   return (
-    <section className="py-24 px-4">
+    <section id="games" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
         <Animated animation="fade-up">
           <h2 className="text-4xl md:text-5xl text-center mb-4 text-glow font-bold">My Gaming World</h2>

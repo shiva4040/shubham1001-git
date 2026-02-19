@@ -8,6 +8,9 @@ import { DailyLife } from './components/DailyLife';
 import { FutureGoals } from './components/FutureGoals';
 import { FunFacts } from './components/FunFacts';
 import { Footer } from './components/Footer';
+import { Navbar } from './components/Navbar';
+import { ScrollProgress } from './components/ScrollProgress';
+import { BackToTop } from './components/BackToTop';
 import { ThemeToggle } from './components/ThemeToggle';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 
@@ -120,10 +123,16 @@ function AppContent() {
         )}
       </div>
 
+      {/* Scroll progress bar */}
+      <ScrollProgress />
+
+      {/* Sticky navigation */}
+      <Navbar />
+
       {/* Theme toggle button (fixed top-right) */}
       <ThemeToggle />
 
-      {/* Page content */}
+      {/* Page content — pt-14 offsets the fixed navbar */}
       <div className="relative" style={{ zIndex: 1 }}>
         <Hero />
         <div className="section-glow-divider" />
@@ -144,6 +153,9 @@ function AppContent() {
         <FunFacts />
         <Footer />
       </div>
+
+      {/* Floating back to top */}
+      <BackToTop />
     </div>
   );
 }

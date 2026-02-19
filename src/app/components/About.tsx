@@ -1,3 +1,4 @@
+
 import { Brain, Zap, Heart } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
@@ -59,8 +60,8 @@ export function About() {
             </div>
             <div className="w-full md:w-1/3">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1632414237690-7713a79fe9d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB2aWxsYWdlJTIwcnVyYWx8ZW58MXx8fHwxNzcwNjQ3MjU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Village life"
+                src="/shubham.png"
+                alt="Shubham"
                 className="w-full h-48 object-cover rounded-xl shadow-md"
               />
             </div>

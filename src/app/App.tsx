@@ -15,8 +15,11 @@ function AppContent() {
     <div
       className="relative min-h-screen"
       style={{
-        background: isLight ? '#f0f4ff' : '#060818',
-        transition: 'background 0.5s ease',
+        background: isLight
+          ? 'linear-gradient(160deg, #dde8ff 0%, #eef2ff 45%, #e4f0fb 100%)'
+          : '#060818',
+        color: isLight ? '#0f1535' : '#e8eaf6',
+        transition: 'background 0.5s ease, color 0.4s ease',
       }}
     >
       {/* Fixed background layer */}
